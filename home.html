@@ -1,25 +1,36 @@
-<!DOCTYPE html> <!--html은 항상 이것으로 시작한다 -->
+<!DOCTYPE html>
+<!--html은 항상 이것으로 시작한다 -->
 <html lang="kr">
 <html>
-    <head><!--외부적으로 보이지 않는 웹사이트의 환경을 설정한다 -->
-        <title>The Nico Times</title>
-        <style>
-            h1 {
-                color: yellowgreen;
-                font-size: 50px;
-            }
-        </style>
-    </head>
-        <body><!--사용자가 볼수있는 contents를 보여준다.-->
-            <header>
-                <h1>The Nico Times</h1>
-            </header>
-            <main>
-                <address>123 Road Altavista</address>
-            </main>
-            <footer>
-                &copy; 2020 N.C
-            </footer>
-        </body>
-</html>
 
+<head>
+    <!--외부적으로 보이지 않는 웹사이트의 환경을 설정한다 -->
+    <title>The Nico Times</title>
+    <style>
+        body {
+            height: 1000vh;
+            margin: 50px;
+        }
+
+        span {
+            /* 모든 span에 적용 */
+            background-color: yellowgreen;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        p::selection {
+            /* p::selection에 배경색이 yellowgreen을 가진다. */
+            color: white;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        asdbgnjksadbgksdagjkasbgkasdngjkasdngkjn
+    </p>
+</body>
+
+</html>
