@@ -7,22 +7,28 @@
     <!--외부적으로 보이지 않는 웹사이트의 환경을 설정한다 -->
     <title>The Nico Times</title>
     <style>
+        :root {
+            --main-color: #fcce00;
+            /* --main-color를 document의 root에 저장 */
+            --default-border: 1px solid var(--main-color)
+                /* color 뿐만아니라 테두리도 이렇게 전체 적용 가능 */
+        }
+
         body {
             height: 1000vh;
             margin: 50px;
         }
 
-        span {
-            /* 모든 span에 적용 */
-            background-color: yellowgreen;
-            padding: 5px;
-            border-radius: 10px;
+        p {
+            background-color: var(--main-color);
+            /* root에 저장된 값 불러오기 */
         }
 
-        p::selection {
-            /* p::selection에 배경색이 yellowgreen을 가진다. */
-            color: white;
-            background-color: yellowgreen;
+        a {
+            color: var(--main-color);
+            /* root에 저장된 값 불러오기 */
+            border: var(--default-border);
+            /* root에 저장된 값 불러오기 */
         }
     </style>
 </head>
@@ -31,6 +37,9 @@
     <p>
         asdbgnjksadbgksdagjkasbgkasdngjkasdngkjn
     </p>
+    <div>
+        <a href="#">website</a>
+    </div>
 </body>
 
 </html>
