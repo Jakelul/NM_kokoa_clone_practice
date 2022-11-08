@@ -7,39 +7,71 @@
     <!--외부적으로 보이지 않는 웹사이트의 환경을 설정한다 -->
     <title>The Nico Times</title>
     <style>
-        :root {
-            --main-color: #fcce00;
-            /* --main-color를 document의 root에 저장 */
-            --default-border: 1px solid var(--main-color)
-                /* color 뿐만아니라 테두리도 이렇게 전체 적용 가능 */
-        }
-
         body {
-            height: 1000vh;
-            margin: 50px;
+            /* 왼쪽에 몰려있던 애니메이션을 중간으로 이동 */
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
         }
 
-        p {
-            background-color: var(--main-color);
-            /* root에 저장된 값 불러오기 */
+        div {
+            background-color: teal;
+            width: 200px;
+            height: 200px;
         }
 
-        a {
-            color: var(--main-color);
-            /* root에 저장된 값 불러오기 */
-            border: var(--default-border);
-            /* root에 저장된 값 불러오기 */
+        /* media query는 핸드폰이나 스크린에 따라서 이 css를 보여주도록 하는것 */
+        @media screen and (max-width:600px) {
+
+            /* screen이 600px보다 작으면 */
+            div {
+                background-color: tomato;
+            }
+
+            /* 이 조건이 발동한다 */
+        }
+
+        @media screen and (min-width: 601px) and (max-width:800px) {
+
+            div {
+                background-color: wheat;
+            }
+        }
+
+        @media screen and (min-width:1200px) {
+
+            div {
+                background-color: turquoise;
+            }
+        }
+
+        span {
+            font-size: 36px;
+        }
+
+        @media screen and (orientation: landscape) {
+            span {
+                display: none;
+                /* 이것은 말그대로 span을 보여주지 않는것 */
+                /* 폰을 가로로 뒤집으면 span에 있는 글자가 사라짐 */
+            }
+        }
+
+        @media print {
+
+            /* 프린트 하려고할때 배경 빨간색으로 바꿈 */
+            body {
+                background-color: tomato;
+            }
         }
     </style>
 </head>
 
 <body>
-    <p>
-        asdbgnjksadbgksdagjkasbgkasdngjkasdngkjn
-    </p>
-    <div>
-        <a href="#">website</a>
-    </div>
+    <div></div>
+    <span>Please flip your phone :(</span>
 </body>
 
 </html>
