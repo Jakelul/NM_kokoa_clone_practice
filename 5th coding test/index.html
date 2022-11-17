@@ -1,80 +1,61 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>5th coding test</title>
+    <title>repl.it</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.14.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-    <div class="father">
-        <div class="status-bar__x">
-            <i class="fas fa-times fa-lg"></i>
-        </div>
-        <div class="status-bar__playlist">
-            <h1 class="status-bar__playlist">Playlist</h1>
-        </div>
-
-        <div class="status-bar">
-            <div class="status-bar__thumnail"><i class="fas fa-images"></i></div>
-            <div class="status-bar__subject">
-                <h1 class="status-bar__text1">Random Love</h1>
-                <h3 class="status-bar__text2">by Divay Kapoor</h3>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <i class="fas fa-times"></i>
+        <h1>Playlist</h1>
+      </header>
+      <main>
+        <section class="main-song">
+          <div class="main-song__cover">
+            <i class="far fa-image fa-3x"></i>
+          </div>
+          <div class="main-song__data">
+              <h3 class="main-song__title">We Love 김치!</h3>
+              <h5 class="main-song__author">By Lynn</h5>
+          </div>
+        </section>
+        <section class="btns">
+          <span class="btns__btn btns__btn--big">
+            <i class="fas fa-play fa-xs"></i>
+            <span>Play</span>
+          </span>
+          <span class="btns__btn"><i class="fas fa-heart"></i></span>
+          <span class="btns__btn"><i class="fas fa-plus"></i></span>
+        </section>
+        <ul class="song-list">
+          <li class="song-list__song">
+            <div class="song-list__cover"></div>
+            <div class="song-list__data">
+                <h5>Corona Sucks</h5>
+                <h6>니꼬</h6>
             </div>
-        </div>
-
-        <div class="status-bar">
-            <div class="status-bar__play"><i class="fas fa-play"></i>Play</div>
-            <div class="status-bar__like"><i class="far fa-heart"></i></div>
-            <div class="status-bar__add"><i class="fas fa-plus"></i></div>
-        </div>
-
-        <nav class="nav">
-            <ul class="nav__btn">
-                <span class="box1">
-                    <li class="nav__list">
-                        Matargasti
-                        <span class="nav__name">
-                            Mohit Chauhan
-                        </span>
-                    </li>
-                </span>
-
-                <span class="box2">
-                    <li class="nav__list">
-                        Attitude
-                        <span class="nav__name">
-                            Lewis OfMan - Attitude
-                        </span>
-                    </li>
-                </span>
-
-                <span class="box3">
-                    <li class="nav__list">
-                        Try Everthing
-                        <span class="nav__name">
-                            Shakira - Zootopia
-                        </span>
-                    </li>
-                </span>
-
-                <span class="box4">
-                    <li class="nav__list">
-                        Sunflower
-                        <span class="nav__name">
-                            Joseph Vincent -Sunflower
-                        </span>
-                    </li>
-                </span>
-            </ul>
-
-        </nav>
+          </li>
+          <li class="song-list__song">
+            <div class="song-list__cover"></div>
+            <div class="song-list__data">
+                <h5>Corona Sucks</h5>
+                <h6>니꼬</h6>
+            </div>
+          </li>
+          <li class="song-list__song">
+            <div class="song-list__cover"></div>
+            <div class="song-list__data">
+                <h5>Corona Sucks</h5>
+                <h6>니꼬</h6>
+            </div>
+          </li>
+        </ul>
+      </main>
     </div>
-    <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
-</body>
-
+  </body>
 </html>
